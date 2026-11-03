@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Watches - HKR Electronics Store House
+    </title>
+
+    <style>
+
+        /* =====================================================
+           BASIC RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f5f7fb;
+
+            color: #172033;
+
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #020617,
+                    #0f172a,
+                    #1e293b
+                );
+
+            color: white;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.25);
+        }
+
+        .logo {
+            font-size: 25px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 14px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #38bdf8;
+
+            color: #082f49;
+        }
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+            min-height: 480px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    #0369a1,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    #7c3aed,
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #020617,
+                    #0f172a
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "⌚";
+
+            position: absolute;
+
+            font-size: 240px;
+
+            opacity: 0.07;
+
+            right: 7%;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%)
+                rotate(12deg);
+        }
+
+        .hero-content {
+            max-width: 900px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        /* UNIQUE HEADING DESIGN */
+
+        .hero h1 {
+            font-size: 62px;
+
+            letter-spacing: 8px;
+
+            text-transform: uppercase;
+
+            color: #e0f2fe;
+
+            margin-bottom: 20px;
+
+            font-weight: 900;
+
+            text-shadow:
+                4px 4px 0 #0369a1;
+
+            border-bottom:
+                8px solid #38bdf8;
+
+            display: inline-block;
+
+            padding-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 20px;
+
+            color: #bae6fd;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            padding:
+                14px 32px;
+
+            background: #38bdf8;
+
+            color: #082f49;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: white;
+
+            transform:
+                scale(1.06);
+        }
+
+        /* =====================================================
+           SECTION TITLE
+        ====================================================== */
+
+        .section-title {
+            text-align: center;
+
+            padding:
+                60px 20px 30px;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+
+            font-size: 40px;
+
+            color: #0c4a6e;
+
+            padding:
+                5px 25px;
+
+            border-left:
+                8px solid #38bdf8;
+
+            border-right:
+                8px solid #38bdf8;
+
+            transform:
+                skew(-8deg);
+        }
+
+        .section-title p {
+            color: #64748b;
+
+            margin-top: 12px;
+        }
+
+        /* =====================================================
+           WATCH CATEGORIES
+        ====================================================== */
+
+        .categories {
+            width: 90%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .category {
+            background: white;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.08);
+
+            border-bottom:
+                5px solid #38bdf8;
+
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(14,116,144,0.2);
+        }
+
+        .category-icon {
+            font-size: 60px;
+
+            margin-bottom: 12px;
+        }
+
+        .category h3 {
+            color: #075985;
+
+            margin-bottom: 8px;
+        }
+
+        .category p {
+            color: #64748b;
+        }
+
+        /* =====================================================
+           PRODUCT GRID
+        ====================================================== */
+
+        .products {
+            width: 90%;
+
+            margin:
+                30px auto 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .watch-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+
+            position: relative;
+        }
+
+        .watch-card:hover {
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 18px 35px
+                rgba(14,116,144,0.20);
+        }
+
+        .sale {
+            position: absolute;
+
+            top: 12px;
+
+            left: 12px;
+
+            background: #dc2626;
+
+            color: white;
+
+            padding:
+                5px 11px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            z-index: 3;
+        }
+
+        .new {
+            position: absolute;
+
+            top: 12px;
+
+            right: 12px;
+
+            background: #059669;
+
+            color: white;
+
+            padding:
+                5px 11px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            z-index: 3;
+        }
+
+        .watch-image {
+            height: 250px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 110px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e0f2fe,
+                    #f0f9ff
+                );
+        }
+
+        .watch-info {
+            padding: 22px;
+        }
+
+        .watch-info h3 {
+            color: #075985;
+
+            font-size: 19px;
+
+            margin-bottom: 8px;
+        }
+
+        .watch-info p {
+            color: #64748b;
+
+            font-size: 14px;
+
+            min-height: 48px;
+        }
+
+        .rating {
+            color: #f59e0b;
+
+            margin:
+                8px 0;
+        }
+
+        .price {
+            color: #0369a1;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: #94a3b8;
+
+            text-decoration: line-through;
+
+            font-size: 14px;
+
+            margin-left: 8px;
+        }
+
+        .buy {
+            display: block;
+
+            text-align: center;
+
+            background: #0369a1;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 11px;
+
+            margin-top: 15px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .buy:hover {
+            background: #0c4a6e;
+        }
+
+        /* =====================================================
+           FEATURES
+        ====================================================== */
+
+        .features {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e0f2fe,
+                    #f0f9ff
+                );
+
+            padding:
+                65px 8%;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(0,0,0,0.07);
+        }
+
+        .feature-icon {
+            font-size: 45px;
+        }
+
+        .feature h3 {
+            color: #075985;
+
+            margin:
+                12px 0;
+        }
+
+        .feature p {
+            color: #64748b;
+        }
+
+        /* =====================================================
+           OFFER BANNER
+        ====================================================== */
+
+        .offer {
+            width: 90%;
+
+            margin:
+                60px auto;
+
+            padding:
+                60px 25px;
+
+            text-align: center;
+
+            border-radius: 25px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0369a1,
+                    #0c4a6e,
+                    #312e81
+                );
+
+            box-shadow:
+                0 15px 35px
+                rgba(3,105,161,0.25);
+        }
+
+        .offer h2 {
+            font-size: 44px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .offer p {
+            color: #dbeafe;
+
+            font-size: 18px;
+
+            margin-bottom: 25px;
+        }
+
+        .offer-button {
+            display: inline-block;
+
+            background: #38bdf8;
+
+            color: #082f49;
+
+            text-decoration: none;
+
+            padding:
+                13px 30px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           COMPARISON TABLE
+        ====================================================== */
+
+        .comparison {
+            width: 90%;
+
+            margin:
+                60px auto;
+        }
+
+        .comparison h2 {
+            text-align: center;
+
+            color: #0c4a6e;
+
+            font-size: 38px;
+
+            margin-bottom: 25px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: white;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.08);
+        }
+
+        th,
+        td {
+            padding: 15px;
+
+            border:
+                1px solid #bae6fd;
+
+            text-align: center;
+        }
+
+        th {
+            background: #075985;
+
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f0f9ff;
+        }
+
+        tr:hover {
+            background: #e0f2fe;
+        }
+
+        /* =====================================================
+           SMART WATCH FEATURES
+        ====================================================== */
+
+        .smart-section {
+            padding:
+                50px 8%;
+        }
+
+        .smart-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .smart-box {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            border-top:
+                5px solid #0ea5e9;
+
+            box-shadow:
+                0 5px 18px
+                rgba(0,0,0,0.07);
+        }
+
+        .smart-box h3 {
+            color: #075985;
+
+            margin-bottom: 10px;
+        }
+
+        .smart-box p {
+            color: #64748b;
+        }
+
+        .smart-box ul {
+            margin-top: 12px;
+
+            padding-left: 20px;
+
+            color: #475569;
+        }
+
+        .smart-box li {
+            margin: 6px 0;
+        }
+
+        /* =====================================================
+           REVIEWS
+        ====================================================== */
+
+        .reviews {
+            width: 90%;
+
+            margin:
+                60px auto;
+        }
+
+        .review-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .review {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(0,0,0,0.08);
+        }
+
+        .review h3 {
+            color: #075985;
+        }
+
+        .review-stars {
+            color: #f59e0b;
+
+            margin:
+                8px 0;
+        }
+
+        .review p {
+            color: #64748b;
+        }
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+            background: #020617;
+
+            color: white;
+
+            text-align: center;
+
+            padding:
+                60px 20px;
+        }
+
+        .newsletter h2 {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: #cbd5e1;
+
+            margin-bottom: 25px;
+        }
+
+        .newsletter input {
+            width: 310px;
+
+            max-width: 80%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            margin-right: 5px;
+        }
+
+        .newsletter button {
+            padding:
+                13px 25px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #38bdf8;
+
+            color: #082f49;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            background: #000814;
+
+            color: #cbd5e1;
+
+            padding:
+                50px 8% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 35px;
+        }
+
+        .footer-column h3 {
+            color: white;
+
+            margin-bottom: 15px;
+
+            padding-bottom: 8px;
+
+            border-bottom:
+                2px solid #0ea5e9;
+        }
+
+        .footer-column p {
+            color: #94a3b8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin: 8px 0;
+        }
+
+        .footer-column a {
+            color: #cbd5e1;
+
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #38bdf8;
+        }
+
+        .copyright {
+            text-align: center;
+
+            border-top:
+                1px solid #334155;
+
+            margin-top: 35px;
+
+            padding-top: 20px;
+        }
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+        ====================================================== */
+
+        @media(max-width:1050px) {
+
+            .products,
+            .categories,
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width:800px) {
+
+            header {
+                justify-content: center;
+
+                gap: 15px;
+
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+
+                letter-spacing: 4px;
+            }
+
+            .smart-grid,
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+
+                letter-spacing: 2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .products,
+            .categories,
+            .feature-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter input {
+                margin-bottom: 10px;
+
+                margin-right: 0;
+            }
+
+            .offer h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+    <div class="logo">
+
+        HKR
+
+        <span>
+            ELECTRONICS
+        </span>
+
+        STORE HOUSE
+
+    </div>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="mobiles.html">
+                    Mobiles
+                </a>
+            </li>
+
+            <li>
+                <a href="laptops.html">
+                    Laptops
+                </a>
+            </li>
+
+            <li>
+                <a href="accessories.html">
+                    Accessories
+                </a>
+            </li>
+
+            <li>
+                <a href="watches.html"
+                   class="active">
+                    Watches
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            SMART WATCHES
+        </h1>
+
+        <p>
+
+            Discover stylish smart watches
+            and fitness bands at
+            HKR Electronics Store House.
+
+        </p>
+
+        <a href="#watches"
+           class="hero-button">
+
+            Explore Watches
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIES
+====================================================== -->
+
+<section class="section-title">
+
+    <h2>
+        Watch Categories
+    </h2>
+
+    <p>
+        Choose a watch according to
+        your lifestyle and requirements.
+    </p>
+
+</section>
+
+
+<section class="categories">
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            ⌚
+        </div>
+
+        <h3>
+            Smart Watches
+        </h3>
+
+        <p>
+            Modern watches with smart
+            features and notifications.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            🏃
+        </div>
+
+        <h3>
+            Fitness Bands
+        </h3>
+
+        <p>
+            Lightweight fitness bands for
+            everyday activity tracking.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            ❤️
+        </div>
+
+        <h3>
+            Health Watches
+        </h3>
+
+        <p>
+            Smart devices with useful
+            wellness and activity features.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            🏆
+        </div>
+
+        <h3>
+            Premium Watches
+        </h3>
+
+        <p>
+            Stylish premium designs for
+            professional and casual use.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     WATCH PRODUCTS
+====================================================== -->
+
+<section class="section-title"
+         id="watches">
+
+    <h2>
+        Popular Watches
+    </h2>
+
+    <p>
+        Explore our popular smart watch
+        collection.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+
+    <!-- WATCH 1 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            25% OFF
+        </span>
+
+        <span class="new">
+            NEW
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Smart Watch Pro
+            </h3>
+
+            <p>
+                Premium smart watch with
+                notifications and fitness
+                tracking features.
+            </p>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <span class="price">
+                ₹2,999
+            </span>
+
+            <span class="old-price">
+                ₹3,999
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 2 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            20% OFF
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Active Watch
+            </h3>
+
+            <p>
+                Lightweight smartwatch for
+                sports and everyday activities.
+            </p>
+
+            <div class="rating">
+                ★★★★☆
+            </div>
+
+            <span class="price">
+                ₹2,499
+            </span>
+
+            <span class="old-price">
+                ₹3,199
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 3 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            30% OFF
+        </span>
+
+        <span class="new">
+            NEW
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Ultra Smart Watch
+            </h3>
+
+            <p>
+                Large display smartwatch
+                with multiple useful features.
+            </p>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <span class="price">
+                ₹3,499
+            </span>
+
+            <span class="old-price">
+                ₹4,999
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 4 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            15% OFF
+        </span>
+
+        <div class="watch-image">
+            🏃
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Fitness Band X
+            </h3>
+
+            <p>
+                Compact fitness band designed
+                for activity tracking.
+            </p>
+
+            <div class="rating">
+                ★★★★☆
+            </div>
+
+            <span class="price">
+                ₹1,499
+            </span>
+
+            <span class="old-price">
+                ₹1,799
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 5 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            20% OFF
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Classic Smart
+            </h3>
+
+            <p>
+                Classic-looking smartwatch
+                suitable for daily use.
+            </p>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <span class="price">
+                ₹2,799
+            </span>
+
+            <span class="old-price">
+                ₹3,499
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 6 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            18% OFF
+        </span>
+
+        <div class="watch-image">
+            🏃
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Sport Band
+            </h3>
+
+            <p>
+                Comfortable fitness band for
+                sports and active lifestyles.
+            </p>
+
+            <div class="rating">
+                ★★★★☆
+            </div>
+
+            <span class="price">
+                ₹1,299
+            </span>
+
+            <span class="old-price">
+                ₹1,599
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 7 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            10% OFF
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Business Watch
+            </h3>
+
+            <p>
+                Elegant smart watch designed
+                for professional users.
+            </p>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <span class="price">
+                ₹3,799
+            </span>
+
+            <span class="old-price">
+                ₹4,299
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WATCH 8 -->
+
+    <div class="watch-card">
+
+        <span class="sale">
+            25% OFF
+        </span>
+
+        <span class="new">
+            NEW
+        </span>
+
+        <div class="watch-image">
+            ⌚
+        </div>
+
+        <div class="watch-info">
+
+            <h3>
+                HKR Max Watch
+            </h3>
+
+            <p>
+                Feature-packed smartwatch
+                with a modern display.
+            </p>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <span class="price">
+                ₹4,499
+            </span>
+
+            <span class="old-price">
+                ₹5,499
+            </span>
+
+            <a href="#"
+               class="buy">
+                Buy Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+====================================================== -->
+
+<section class="features">
+
+    <section class="section-title">
+
+        <h2>
+            Smart Watch Features
+        </h2>
+
+    </section>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Smart Notifications
+            </h3>
+
+            <p>
+                Stay updated with compatible
+                phone notifications.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🏃
+            </div>
+
+            <h3>
+                Activity Tracking
+            </h3>
+
+            <p>
+                Track everyday activity and
+                fitness information.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎵
+            </div>
+
+            <h3>
+                Music Control
+            </h3>
+
+            <p>
+                Conveniently control compatible
+                music playback.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔋
+            </div>
+
+            <h3>
+                Long Battery
+            </h3>
+
+            <p>
+                Designed to provide convenient
+                everyday battery performance.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SPECIAL OFFER
+====================================================== -->
+
+<section class="offer">
+
+    <h2>
+        Smart Watch Festival Sale
+    </h2>
+
+    <p>
+        Get exciting discounts on selected
+        smart watches and fitness bands.
+    </p>
+
+    <a href="#watches"
+       class="offer-button">
+
+        Shop Now
+
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     COMPARISON TABLE
+====================================================== -->
+
+<section class="comparison">
+
+    <h2>
+        Watch Comparison
+    </h2>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Watch
+                </th>
+
+                <th>
+                    Display
+                </th>
+
+                <th>
+                    Connectivity
+                </th>
+
+                <th>
+                    Battery
+                </th>
+
+                <th>
+                    Price
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HKR Smart Watch Pro
+                </td>
+
+                <td>
+                    HD Display
+                </td>
+
+                <td>
+                    Bluetooth
+                </td>
+
+                <td>
+                    Long Life
+                </td>
+
+                <td>
+                    ₹2,999
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HKR Active Watch
+                </td>
+
+                <td>
+                    Touch Display
+                </td>
+
+                <td>
+                    Bluetooth
+                </td>
+
+                <td>
+                    Long Life
+                </td>
+
+                <td>
+                    ₹2,499
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HKR Ultra Smart Watch
+                </td>
+
+                <td>
+                    Large Display
+                </td>
+
+                <td>
+                    Bluetooth
+                </td>
+
+                <td>
+                    Extended
+                </td>
+
+                <td>
+                    ₹3,499
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HKR Fitness Band X
+                </td>
+
+                <td>
+                    AMOLED
+                </td>
+
+                <td>
+                    Bluetooth
+                </td>
+
+                <td>
+                    Long Life
+                </td>
+
+                <td>
+                    ₹1,499
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HKR Max Watch
+                </td>
+
+                <td>
+                    HD Touch
+                </td>
+
+                <td>
+                    Bluetooth
+                </td>
+
+                <td>
+                    Extended
+                </td>
+
+                <td>
+                    ₹4,499
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SMART WATCH INFORMATION
+====================================================== -->
+
+<section class="smart-section">
+
+    <section class="section-title">
+
+        <h2>
+            Choose Your Smart Watch
+        </h2>
+
+        <p>
+            Select a model according to
+            your requirements.
+        </p>
+
+    </section>
+
+
+    <div class="smart-grid">
+
+
+        <div class="smart-box">
+
+            <h3>
+                For Students
+            </h3>
+
+            <p>
+                A simple smartwatch can be
+                useful for notifications and
+                everyday activity.
+            </p>
+
+            <ul>
+
+                <li>
+                    Comfortable design
+                </li>
+
+                <li>
+                    Notifications
+                </li>
+
+                <li>
+                    Activity tracking
+                </li>
+
+                <li>
+                    Affordable options
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="smart-box">
+
+            <h3>
+                For Fitness
+            </h3>
+
+            <p>
+                Fitness-oriented watches can
+                help organize everyday workouts
+                and activities.
+            </p>
+
+            <ul>
+
+                <li>
+                    Activity tracking
+                </li>
+
+                <li>
+                    Workout modes
+                </li>
+
+                <li>
+                    Comfortable strap
+                </li>
+
+                <li>
+                    Lightweight design
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="smart-box">
+
+            <h3>
+                For Professionals
+            </h3>
+
+            <p>
+                Choose a stylish smartwatch
+                suitable for work and everyday
+                communication.
+            </p>
+
+            <ul>
+
+                <li>
+                    Premium appearance
+                </li>
+
+                <li>
+                    Smart notifications
+                </li>
+
+                <li>
+                    Large display
+                </li>
+
+                <li>
+                    Modern design
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTOMER REVIEWS
+====================================================== -->
+
+<section class="reviews">
+
+    <section class="section-title">
+
+        <h2>
+            Customer Reviews
+        </h2>
+
+    </section>
+
+
+    <div class="review-grid">
+
+
+        <div class="review">
+
+            <h3>
+                Arjun
+            </h3>
+
+            <div class="review-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                The smartwatch design is
+                stylish and the features are
+                useful for everyday use.
+            </p>
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>
+                Sneha
+            </h3>
+
+            <div class="review-stars">
+                ★★★★★
+            </div>
+
+            <p>
+                I liked the selection of
+                fitness bands and smart watches
+                on the website.
+            </p>
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>
+                Vijay
+            </h3>
+
+            <div class="review-stars">
+                ★★★★☆
+            </div>
+
+            <p>
+                Good collection with different
+                price ranges and designs.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+    <h2>
+        Get Watch Offers
+    </h2>
+
+    <p>
+        Subscribe for new smartwatch
+        launches and special offers.
+    </p>
+
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required>
+
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <div class="footer-column">
+
+            <h3>
+                HKR Electronics Store House
+            </h3>
+
+            <p>
+                Your destination for mobiles,
+                laptops, watches and electronics
+                accessories.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mobiles.html">
+                        Mobiles
+                    </a>
+                </li>
+
+                <li>
+                    <a href="laptops.html">
+                        Laptops
+                    </a>
+                </li>
+
+                <li>
+                    <a href="accessories.html">
+                        Accessories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="watches.html">
+                        Watches
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Service
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Help Center
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Delivery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Warranty
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <ul>
+
+                <li>
+                    📍 Andhra Pradesh, India
+                </li>
+
+                <li>
+                    📞 +91 98765 43210
+                </li>
+
+                <li>
+                    ✉️ info@hkrelectronics.com
+                </li>
+
+                <li>
+                    🕘 9:00 AM - 9:00 PM
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 HKR ELECTRONICS STORE HOUSE.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

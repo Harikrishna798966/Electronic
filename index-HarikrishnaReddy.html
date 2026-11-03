@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>HKR Electronics Store House</title>
+
+<style>
+
+/* ==============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ==============================
+   HEADER
+================================ */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #facc15;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #facc15;
+    color: #111827;
+}
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 480px;
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.60),
+            rgba(15, 23, 42, 0.70)
+        ),
+        url("images/building.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-box {
+    max-width: 750px;
+    color: white;
+}
+
+.hero-box h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero-box h1 span {
+    color: #facc15;
+}
+
+.hero-box p {
+    font-size: 17px;
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #facc15;
+    color: #111827;
+}
+
+/* ==============================
+   COMMON SECTION
+================================ */
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.title h2 {
+    display: inline-block;
+    color: #1e3a8a;
+    font-size: 32px;
+    border-bottom: 3px solid #facc15;
+    padding-bottom: 7px;
+}
+
+.title p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+/* ==============================
+   CATEGORY
+================================ */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+}
+
+.category-photo {
+    height: 190px;
+    background: #e5e7eb;
+}
+
+.category-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-content {
+    padding: 18px;
+    text-align: center;
+}
+
+.category-content h3 {
+    color: #1e40af;
+    margin-bottom: 7px;
+}
+
+.category-content p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+/* ==============================
+   PRODUCT GRID
+================================ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+}
+
+.product-photo {
+    height: 230px;
+    background: #e5e7eb;
+}
+
+.product-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 17px;
+}
+
+.product-details h3 {
+    color: #172554;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.product-details p {
+    color: #64748b;
+    font-size: 13px;
+    min-height: 42px;
+}
+
+.rating {
+    color: #f59e0b;
+    margin: 8px 0;
+}
+
+.price {
+    color: #dc2626;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.old {
+    color: #94a3b8;
+    text-decoration: line-through;
+    font-size: 13px;
+    margin-left: 6px;
+}
+
+.product-btn {
+    display: block;
+    text-align: center;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px;
+    margin-top: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.product-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ==============================
+   OFFER
+================================ */
+
+.offer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto 55px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    color: white;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #2563eb
+        );
+}
+
+.offer h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    margin-bottom: 20px;
+    color: #dbeafe;
+}
+
+/* ==============================
+   SERVICES
+================================ */
+
+.services {
+    background: #eaf0ff;
+    padding: 55px 5%;
+}
+
+.service-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 25px 18px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.service-icon {
+    font-size: 35px;
+}
+
+.service h3 {
+    color: #1e40af;
+    margin: 8px 0;
+}
+
+.service p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ==============================
+   ABOUT
+================================ */
+
+.about {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 60px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+
+    align-items: center;
+}
+
+.about-image {
+    height: 330px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #e5e7eb;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    color: #1e3a8a;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+/* ==============================
+   STATS
+================================ */
+
+.stats {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 0 60px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.stat h3 {
+    font-size: 32px;
+    color: #2563eb;
+}
+
+.stat p {
+    color: #64748b;
+}
+
+/* ==============================
+   REVIEWS
+================================ */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.review h3 {
+    color: #1e40af;
+}
+
+.review p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ==============================
+   NEWSLETTER
+================================ */
+
+.newsletter {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.newsletter p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    width: 280px;
+    max-width: 80%;
+    padding: 11px 15px;
+    border: none;
+    border-radius: 6px;
+}
+
+.newsletter button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #facc15;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    background: #020617;
+    color: #cbd5e1;
+    padding: 45px 7% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-column h3 {
+    color: white;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+}
+
+.footer-column p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.footer-column a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #facc15;
+}
+
+.copyright {
+    border-top: 1px solid #334155;
+    margin-top: 30px;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:1000px) {
+
+    .category-grid,
+    .product-grid,
+    .service-grid,
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:700px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .hero-box h1 {
+        font-size: 34px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .service-grid,
+    .stats,
+    .review-grid,
+    .footer-grid,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+
+    .newsletter input {
+        margin-bottom: 10px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ==============================
+     HEADER
+================================ -->
+
+<header>
+
+    <div class="logo">
+        HKR <span>ELECTRONICS</span> STORE HOUSE
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="mobiles.html">
+                    Mobiles
+                </a>
+            </li>
+
+            <li>
+                <a href="laptops.html">
+                    Laptops
+                </a>
+            </li>
+
+            <li>
+                <a href="accessories.html">
+                    Accessories
+                </a>
+            </li>
+
+            <li>
+                <a href="watches.html">
+                    Watches
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ==============================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="hero-box">
+
+        <h1>
+            Welcome to
+            <span>HKR Electronics</span>
+        </h1>
+
+        <p>
+            Your trusted destination for
+            mobiles, laptops, smart watches
+            and electronic accessories.
+        </p>
+
+        <a href="products.html" class="btn">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     CATEGORIES
+================================ -->
+
+<section class="section">
+
+    <div class="title">
+
+        <h2>
+            Shop By Category
+        </h2>
+
+        <p>
+            Choose your favourite electronics
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <!-- iPhone -->
+
+        <div class="category-card">
+
+            <div class="category-photo">
+
+                <img
+                    src="images/iphone.jpg"
+                    alt="iPhone">
+
+            </div>
+
+            <div class="category-content">
+
+                <h3>
+                    iPhone
+                </h3>
+
+                <p>
+                    Latest Apple smartphones.
+                </p>
+
+                <a
+                    href="mobiles.html"
+                    class="btn">
+
+                    View Mobiles
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MacBook -->
+
+        <div class="category-card">
+
+            <div class="category-photo">
+
+                <img
+                    src="images/macbook.jpg"
+                    alt="MacBook">
+
+            </div>
+
+            <div class="category-content">
+
+                <h3>
+                    MacBook
+                </h3>
+
+                <p>
+                    Powerful laptops for work.
+                </p>
+
+                <a
+                    href="laptops.html"
+                    class="btn">
+
+                    View Laptops
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Titan Watch -->
+
+        <div class="category-card">
+
+            <div class="category-photo">
+
+                <img
+                    src="images/titan-watch.jpg"
+                    alt="Titan Watch">
+
+            </div>
+
+            <div class="category-content">
+
+                <h3>
+                    Titan Watches
+                </h3>
+
+                <p>
+                    Stylish watches for everyone.
+                </p>
+
+                <a
+                    href="watches.html"
+                    class="btn">
+
+                    View Watches
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Accessories -->
+
+        <div class="category-card">
+
+            <div class="category-photo">
+
+                <img
+                    src="images/accessories.jpg"
+                    alt="Accessories">
+
+            </div>
+
+            <div class="category-content">
+
+                <h3>
+                    Accessories
+                </h3>
+
+                <p>
+                    Useful electronic accessories.
+                </p>
+
+                <a
+                    href="accessories.html"
+                    class="btn">
+
+                    View Accessories
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     PRODUCTS
+================================ -->
+
+<section class="section">
+
+    <div class="title">
+
+        <h2>
+            Featured Products
+        </h2>
+
+        <p>
+            Popular products available
+            at HKR Electronics
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/iphone.jpg"
+                    alt="iPhone">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    iPhone
+                </h3>
+
+                <p>
+                    Premium smartphone
+                    with advanced features.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹59,999
+                </span>
+
+                <span class="old">
+                    ₹69,999
+                </span>
+
+                <a
+                    href="mobiles.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/macbook.jpg"
+                    alt="MacBook">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    MacBook
+                </h3>
+
+                <p>
+                    Powerful and lightweight
+                    laptop for professionals.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹89,999
+                </span>
+
+                <span class="old">
+                    ₹99,999
+                </span>
+
+                <a
+                    href="laptops.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/titan-watch.jpg"
+                    alt="Titan Watch">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Titan Watch
+                </h3>
+
+                <p>
+                    Stylish watch with
+                    premium design.
+                </p>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <span class="price">
+                    ₹4,999
+                </span>
+
+                <span class="old">
+                    ₹6,499
+                </span>
+
+                <a
+                    href="watches.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/accessories.jpg"
+                    alt="Accessories">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Electronic Accessories
+                </h3>
+
+                <p>
+                    Quality accessories
+                    for your devices.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹1,999
+                </span>
+
+                <span class="old">
+                    ₹2,499
+                </span>
+
+                <a
+                    href="accessories.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/samsung.jpg"
+                    alt="Samsung Mobile">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Samsung Smartphone
+                </h3>
+
+                <p>
+                    Powerful smartphone
+                    with modern features.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹34,999
+                </span>
+
+                <span class="old">
+                    ₹39,999
+                </span>
+
+                <a
+                    href="mobiles.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/laptop2.jpg"
+                    alt="Laptop">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Premium Laptop
+                </h3>
+
+                <p>
+                    Suitable for students
+                    and professionals.
+                </p>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <span class="price">
+                    ₹54,999
+                </span>
+
+                <span class="old">
+                    ₹62,999
+                </span>
+
+                <a
+                    href="laptops.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/watch2.jpg"
+                    alt="Smart Watch">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Smart Watch
+                </h3>
+
+                <p>
+                    Smart features with
+                    stylish design.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹3,499
+                </span>
+
+                <span class="old">
+                    ₹4,999
+                </span>
+
+                <a
+                    href="watches.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/headphones.jpg"
+                    alt="Headphones">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Wireless Headphones
+                </h3>
+
+                <p>
+                    Clear sound with
+                    comfortable design.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹1,999
+                </span>
+
+                <span class="old">
+                    ₹2,999
+                </span>
+
+                <a
+                    href="accessories.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/speaker.jpg"
+                    alt="Bluetooth Speaker">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Bluetooth Speaker
+                </h3>
+
+                <p>
+                    Portable speaker with
+                    powerful sound.
+                </p>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <span class="price">
+                    ₹2,499
+                </span>
+
+                <span class="old">
+                    ₹3,199
+                </span>
+
+                <a
+                    href="accessories.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/keyboard.jpg"
+                    alt="Keyboard">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Gaming Keyboard
+                </h3>
+
+                <p>
+                    Comfortable keyboard
+                    for gaming and work.
+                </p>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <span class="price">
+                    ₹1,799
+                </span>
+
+                <span class="old">
+                    ₹2,299
+                </span>
+
+                <a
+                    href="accessories.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 11 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/mouse.jpg"
+                    alt="Wireless Mouse">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Wireless Mouse
+                </h3>
+
+                <p>
+                    Comfortable mouse
+                    for everyday use.
+                </p>
+
+                <div class="rating">
+                    ★★★★☆
+                </div>
+
+                <span class="price">
+                    ₹799
+                </span>
+
+                <span class="old">
+                    ₹999
+                </span>
+
+                <a
+                    href="accessories.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 12 -->
+
+        <div class="product">
+
+            <div class="product-photo">
+
+                <img
+                    src="images/watch2.jpg"
+                    alt="Smart Watch">
+
+            </div>
+
+            <div class="product-details">
+
+                <h3>
+                    Premium Smart Watch
+                </h3>
+
+                <p>
+                    Modern smart watch
+                    for daily activities.
+                </p>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <span class="price">
+                    ₹4,999
+                </span>
+
+                <span class="old">
+                    ₹6,499
+                </span>
+
+                <a
+                    href="watches.html"
+                    class="product-btn">
+
+                    View Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     OFFER
+================================ -->
+
+<section class="offer">
+
+    <h2>
+        Mega Electronics Sale
+    </h2>
+
+    <p>
+        Get exciting offers and
+        discounts on selected products.
+    </p>
+
+    <a
+        href="products.html"
+        class="btn">
+
+        Shop Now
+
+    </a>
+
+</section>
+
+
+<!-- ==============================
+     SERVICES
+================================ -->
+
+<section class="services">
+
+    <div class="title">
+
+        <h2>
+            Our Services
+        </h2>
+
+        <p>
+            Reliable service for every customer
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🚚
+            </div>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Quick and reliable
+                product delivery.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🔒
+            </div>
+
+            <h3>
+                Secure Payment
+            </h3>
+
+            <p>
+                Safe and convenient
+                payment options.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🛠️
+            </div>
+
+            <h3>
+                Product Support
+            </h3>
+
+            <p>
+                Support for your
+                electronic products.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Quality Products
+            </h3>
+
+            <p>
+                Quality products from
+                trusted brands.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT
+================================ -->
+
+<section class="about">
+
+
+    <div class="about-image">
+
+        <img
+            src="images/building.jpg"
+            alt="HKR Electronics Store">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <h2>
+            About HKR Electronics
+        </h2>
+
+        <p>
+            HKR Electronics Store House
+            provides a wide range of
+            electronic products.
+        </p>
+
+        <p>
+            Our collection includes
+            smartphones, laptops,
+            watches, headphones and
+            other accessories.
+        </p>
+
+        <p>
+            We aim to provide quality
+            products and a simple
+            shopping experience.
+        </p>
+
+        <a
+            href="contact.html"
+            class="btn">
+
+            Contact Us
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==============================
+     STATS
+================================ -->
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <h3>
+            1000+
+        </h3>
+
+        <p>
+            Products
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h3>
+            5000+
+        </h3>
+
+        <p>
+            Happy Customers
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h3>
+            50+
+        </h3>
+
+        <p>
+            Brands
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h3>
+            24/7
+        </h3>
+
+        <p>
+            Customer Support
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==============================
+     REVIEWS
+================================ -->
+
+<section class="section">
+
+    <div class="title">
+
+        <h2>
+            Customer Reviews
+        </h2>
+
+    </div>
+
+
+    <div class="review-grid">
+
+
+        <div class="review">
+
+            <h3>
+                Rahul
+            </h3>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <p>
+                Good products and
+                excellent shopping
+                experience.
+            </p>
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>
+                Arjun
+            </h3>
+
+            <div class="rating">
+                ★★★★★
+            </div>
+
+            <p>
+                Good collection of
+                mobiles and laptops.
+            </p>
+
+        </div>
+
+
+        <div class="review">
+
+            <h3>
+                Priya
+            </h3>
+
+            <div class="rating">
+                ★★★★☆
+            </div>
+
+            <p>
+                I liked the watches
+                and accessories.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     NEWSLETTER
+================================ -->
+
+<section class="newsletter">
+
+    <h2>
+        Stay Updated
+    </h2>
+
+    <p>
+        Subscribe for latest products
+        and special offers.
+    </p>
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-column">
+
+            <h3>
+                HKR Electronics
+            </h3>
+
+            <p>
+                Your destination for
+                mobiles, laptops, watches
+                and electronic accessories.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mobiles.html">
+                        Mobiles
+                    </a>
+                </li>
+
+                <li>
+                    <a href="laptops.html">
+                        Laptops
+                    </a>
+                </li>
+
+                <li>
+                    <a href="watches.html">
+                        Watches
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Service
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Help Center
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Warranty
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <ul>
+
+                <li>
+                    📍 Andhra Pradesh, India
+                </li>
+
+                <li>
+                    📞 +91 98765 43210
+                </li>
+
+                <li>
+                    ✉️ info@hkrelectronics.com
+                </li>
+
+                <li>
+                    🕘 9 AM - 9 PM
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 HKR Electronics Store House.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
